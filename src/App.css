@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import 'tailwindcss';
+#root {
+  font-family: 'Nunito', sans-serif;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background: white;
+  border: 2px solid #ff2d75; /* rosa */
+  opacity: 1;
+  margin: 0 6px !important;
+  transition: all 0.3s ease;
+}
+
+/* Bullet activo */
+.hero-swiper .swiper-pagination-bullet-active {
+  background: #ff2d75;
+  border: 2px solid #ff2d75;
+}
+
+.academic-swiper .swiper-pagination-bullet {
+  width: 32px;
+  height: 32px;
+  background: white;
+  border: 2px solid #eaff00; /* rosa */
+  opacity: 1;
+  margin: 0 6px !important;
+  transition: all 0.3s ease;
+}

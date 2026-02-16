@@ -4,6 +4,11 @@ import emailjs from '@emailjs/browser'
 import Select from './Select'
 import { STUDYING_OPTIONS, type FormValues } from './formTypes'
 
+// Acceso a las variables de entorno de Vite
+const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
 const notify = () =>
   toast.success('Message sent successfully.', {
     duration: 4000,
@@ -34,7 +39,7 @@ const Form = () => {
   const onSubmit = async (data: FormValues) => {
     try {
       console.log('SUBMITTING', data)
-      await emailjs.send('service_tc8s71j', 'template_h7ctdu8', data, 'zr8YaRGVQSuB_UD88')
+      await emailjs.send(serviceId, templateId, data, publicKey)
       notify()
       reset()
     } catch (error: any) {

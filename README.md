@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+# 🤖 Academia de Robótica
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Bienvenido al repositorio oficial de la **Academia de Robótica**! Este es un proyecto desarrollado con tecnologías web modernas para gestionar y visualizar las actividades, cursos y recursos de la academia.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este proyecto ha sido construido utilizando el stack más eficiente para aplicaciones web rápidas y escalables:
 
-## React Compiler
+* **React 19** - Librería principal para la interfaz de usuario.
+* **TypeScript** - Para un desarrollo seguro y con tipado estático.
+* **Vite** - Herramienta de construcción (build tool) ultra rápida.
+* **ESLint** - Para mantener un código limpio y estandarizado.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## 📦 Instalación
 
-## Expanding the ESLint configuration
+Para replicar este proyecto localmente, sigue estos pasos:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Clona el repositorio:**
+```bash
+git clone https://github.com/danieljml/Academia-de-robotica.git
+cd Academia-de-robotica
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. **Instala las dependencias:**
+```bash
+npm install
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+
+
+3. **Inicia el servidor de desarrollo:**
+```bash
+npm run dev
+
+```
+
+
+4. **Abre tu navegador** en `http://localhost:5173`.
+
+## 🛠️ Scripts Disponibles
+
+En el directorio del proyecto puedes ejecutar los siguientes comandos:
+
+* `npm run dev`: Inicia el servidor de desarrollo con HMR (Hot Module Replacement).
+* `npm run build`: Compila la aplicación en la carpeta `dist/` para producción.
+* `npm run lint`: Ejecuta ESLint para revisar posibles errores de código.
+* `npm run preview`: Sirve localmente la versión compilada de producción.
+
+## 📂 Estructura del Proyecto
+
+```text
+├── public/          # Activos estáticos (imágenes, iconos)
+├── src/             # Código fuente de la aplicación
+│   ├── assets/      # Estilos y archivos multimedia
+│   ├── components/  # Componentes reutilizables de React
+│   ├── App.tsx      # Componente principal
+│   └── main.tsx     # Punto de entrada de la aplicación
+├── index.html       # Archivo HTML base
+├── vite.config.ts   # Configuración de Vite
+└── tsconfig.json    # Configuración de TypeScript
+
+```
+
+## 🤝 Contribuciones
+
+Si deseas contribuir a este proyecto:
+
+1. Haz un **Fork** del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
+3. Realiza tus cambios y haz un **Commit** (`git commit -m 'Añade nueva funcionalidad'`).
+4. Sube tus cambios a tu rama (`git push origin feature/nueva-funcionalidad`).
+5. Abre un **Pull Request**.
+
+---
+
+*Desarrollado por [danieljml*](https://github.com/danieljml)

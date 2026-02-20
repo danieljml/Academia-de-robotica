@@ -22,7 +22,7 @@ const BenefitsSection = () => {
         {/* Left Content */}
         <div className="text-white space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-            Why Our Schools are the Right Fit for Your Child?
+            Why Our Schools are the Right Fit for Your Child
           </h2>
 
           <p className="text-white/80 max-w-md">
